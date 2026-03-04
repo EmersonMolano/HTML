@@ -3,85 +3,126 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etiquetas HTML</title>
-    <link rel="stylesheet" href="Style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Etiquetas HTML</title>
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
 
-    <!--Blog Educativo sobre Etiquetas HTML
+        <!--Blog Educativo sobre Etiquetas HTML
 
-    -expliquen las etiquetas HTML organizadas por categorías (estructurales, texto, 
-    listas, formularios, tablas y multimedia). 
+        -expliquen las etiquetas HTML organizadas por categorías (estructurales, texto, 
+        listas, formularios, tablas y multimedia). 
 
-    Cada sección del blog deberá contener: 
+        Cada sección del blog deberá contener: 
 
-    Definición de la etiqueta. 
+        Definición de la etiqueta. 
 
-    Sintaxis básica. 
+        Sintaxis básica. 
 
-    Ejemplo práctico funcional. 
+        Ejemplo práctico funcional. 
 
-    Captura o demostración visual. 
+        Captura o demostración visual. 
 
-    Explicación del uso adecuado. 
+        Explicación del uso adecuado. 
 
-    Buenas prácticas. 
+        Buenas prácticas. 
 
-    Navegación entre categorias
-
-
-
-    categorias--------
-            ---Salsa1
-                    ----------------
-                    ----------------
-                    ----------------
-                    ----------------
-            ---Salsa2
-                    ----------------
-                    ----------------
-                    ----------------
-                    ----------------
-            ---Salsa3
-                    ----------------
-                    ----------------
-                    ----------------
-                    ----------------
-            ---Salsa4
-                    ----------------
-                    ----------------
-                    ----------------
-                    ----------------
-            ---Salsa5
-                    ----------------
-                    ----------------
-                    ----------------
-                    ----------------
-            ---Salsa6
-                    ----------------
-                    ----------------
-                    ----------------
-                    ----------------
--->
-
-
-    <ul class="menu">
-        <li><a href="#">Inicio</a></li>
-            <li>
-                <a href="#">Servicios</a>
-                <ul class="submenu">
-                    <li><a href="#">Diseño</a></li>
-                    <li><a href="#">Programación</a></li>
-                    <li><a href="#">Soporte</a></li>
-                </ul>
-            </li>
-        <li><a href="#">Contacto</a></li>
-    </ul>
+        Navegación entre categorias
 
 
 
-</body>
+        categorias--------
+                ---Salsa1
+                        ----------------
+                        ----------------
+                        ----------------
+                        ----------------
+                ---Salsa2
+                        ----------------
+                        ----------------
+                        ----------------
+                        ----------------
+                ---Salsa3
+                        ----------------
+                        ----------------
+                        ----------------
+                        ----------------
+                ---Salsa4
+                        ----------------
+                        ----------------
+                        ----------------
+                        ----------------
+                ---Salsa5
+                        ----------------
+                        ----------------
+                        ----------------
+                        ----------------
+                ---Salsa6
+                        ----------------
+                        ----------------
+                        ----------------
+                        ----------------
+    -->
+
+
+    <!-- <nav>
+            <a href="#seccion1">Texto 1</a>
+            <a href="#seccion2">Texto 2</a>
+            <a href="#seccion3">Texto 3</a>
+            <a href="#seccion4">Texto 4</a>
+        </nav>
+        <section id="seccion1">
+            <h2>Sección 1</h2>
+            <p>Información 1...</p>
+        </section>
+
+        <section id="seccion2">
+            <h2>Sección 2</h2>
+            <p>Información 2...</p>
+        </section>
+
+        <section id="seccion3">
+            <h2>Sección 3</h2>
+            <p>Información 3...</p>
+        </section>
+
+        <section id="seccion4">
+            <h2>Sección 4</h2>
+            <p>Información 4...</p>
+        </section>
+    -->
+        <button id="toggleBtn">☰</button>
+
+        <div id="sidebar" class="sidebar">
+            <ul>
+                <li>
+                    <button class="dropdown-btn">Sección 1</button>
+                    <ul class="submenu">
+                        <li><a href="#parte1">Parte 1</a></li>
+                        <li><a href="#parte2">Parte 2</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="dropdown-btn">Sección 2</button>
+                    <ul class="submenu">
+                        <li><a href="#parte3">Parte 3</a></li>
+                        <li><a href="#parte4">Parte 4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <section id="parte1"><h2>Parte 1</h2></section>
+            <section id="parte2"><h2>Parte 2</h2></section>
+            <section id="parte3"><h2>Parte 3</h2></section>
+            <section id="parte4"><h2>Parte 4</h2></section>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
 </html>
