@@ -8,121 +8,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Etiquetas HTML</title>
         <link rel="stylesheet" href="Style.css">
+        <!--CSS para el booststrap-->
+        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
     </head>
     <body>
-
-        <!--Blog Educativo sobre Etiquetas HTML
-
-        -expliquen las etiquetas HTML organizadas por categorías (estructurales, texto, 
-        listas, formularios, tablas y multimedia). 
-
-        Cada sección del blog deberá contener: 
-
-        Definición de la etiqueta. 
-
-        Sintaxis básica. 
-
-        Ejemplo práctico funcional. 
-
-        Captura o demostración visual. 
-
-        Explicación del uso adecuado. 
-
-        Buenas prácticas. 
-
-        Navegación entre categorias
-
-
-
-        categorias--------
-                ---Salsa1
-                        ----------------
-                        ----------------
-                        ----------------
-                        ----------------
-                ---Salsa2
-                        ----------------
-                        ----------------
-                        ----------------
-                        ----------------
-                ---Salsa3
-                        ----------------
-                        ----------------
-                        ----------------
-                        ----------------
-                ---Salsa4
-                        ----------------
-                        ----------------
-                        ----------------
-                        ----------------
-                ---Salsa5
-                        ----------------
-                        ----------------
-                        ----------------
-                        ----------------
-                ---Salsa6
-                        ----------------
-                        ----------------
-                        ----------------
-                        ----------------
-    -->
-
-
-    <!-- <nav>
-            <a href="#seccion1">Texto 1</a>
-            <a href="#seccion2">Texto 2</a>
-            <a href="#seccion3">Texto 3</a>
-            <a href="#seccion4">Texto 4</a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        <section id="seccion1">
-            <h2>Sección 1</h2>
-            <p>Información 1...</p>
-        </section>
+        
 
-        <section id="seccion2">
-            <h2>Sección 2</h2>
-            <p>Información 2...</p>
-        </section>
+        <!--JavaScript para el booststrap-->
+        <link rel="stylesheet" href="bootstrap-5.3.8-dist/js/bootstrap.min.js">
 
-        <section id="seccion3">
-            <h2>Sección 3</h2>
-            <p>Información 3...</p>
-        </section>
-
-        <section id="seccion4">
-            <h2>Sección 4</h2>
-            <p>Información 4...</p>
-        </section>
-    -->
-        <button id="toggleBtn">☰</button>
-
-        <div id="sidebar" class="sidebar">
-            <ul>
-                <li>
-                    <button class="dropdown-btn">Sección 1</button>
-                    <ul class="submenu">
-                        <li><a href="#parte1">Parte 1</a></li>
-                        <li><a href="#parte2">Parte 2</a></li>
-                    </ul>
-                </li>
-
-                <li>
-                    <button class="dropdown-btn">Sección 2</button>
-                    <ul class="submenu">
-                        <li><a href="#parte3">Parte 3</a></li>
-                        <li><a href="#parte4">Parte 4</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <div class="content">
-            <section id="parte1"><h2>Parte 1</h2></section>
-            <section id="parte2"><h2>Parte 2</h2></section>
-            <section id="parte3"><h2>Parte 3</h2></section>
-            <section id="parte4"><h2>Parte 4</h2></section>
-        </div>
-
-        <script src="script.js"></script>
     </body>
 </html>
