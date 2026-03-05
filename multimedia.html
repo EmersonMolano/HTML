@@ -1,43 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Etiquetas HTML</title>
-        <link rel="stylesheet" href="Style.css">
-        <!--CSS para el booststrap-->
-        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+<header>
+  <h1>Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
 
-    </head>
-    <body>
-        <!--Opciones de busqueda-->
-        
-            <nav class="navbar bg-body-tertiary">
-            <form class="container-fluid justify-content-start">
-                <a class="btn btn-lg btn-outline-success me-2" href="./index.html">Inicio</a>
-                <div class="Centrar">
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./estructurales.html">Estructurales</a> 
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./texto.html">Texto</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./listas.html">Listas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./formularios.html">Formularios</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./tablas.html">Tablas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./multimedia.html">Multimedia</a>
-                </div>
-            </form>
-            </nav>
-        <div class="body">    
-            <!--Contenido-->
-            <div id="contenido">
-                <h1 class="Centrar">¿Que es una etiqueta en HTML?</h1>
-                <h3>Una etiqueta HTML es una instrucción que le dice al navegador qué es cada parte del contenido. No le dice solo “muéstralo bonito”, le dice “esto es un título”, “esto es un párrafo”, “esto es navegación”, “esto es una imagen”, “esto es un formulario”.</h3>
-                <br>
-                <h3>HTML no diseña. HTML describe. Es lenguaje estructural, no decorativo.</h3>
-            
-            
-            </div>
-            <!--JavaScript para el booststrap-->
-            <link rel="stylesheet" href="bootstrap-5.3.8-dist/js/bootstrap.min.js">
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html">Estructurales</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html">Formularios</a>
+  <a href="tablas.html">Tablas</a>
+  <a href="multimedia.html" class="active">Multimedia</a>
+  <a href="practica.html">Práctica</a>
+</nav>
+
+<main>
+<section class="categoria">
+  <h2 class="categoria-titulo">Etiquetas Multimedia</h2>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;img&gt; &lt;figure&gt; &lt;figcaption&gt;</span>
+      <h3>Imagen con contexto</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> &lt;img&gt; inserta imágenes. &lt;figure&gt; y &lt;figcaption&gt; dan contexto semántico relacionando la imagen con su descripción.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'img1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'img1t','dem')">Información</button>
+      </div>
+      <div id="img1t-sin" class="tab-panel active">
+<pre>&lt;figure&gt;
+  &lt;img src="foto.jpg"
+       alt="Descripción de la imagen"
+       width="800" height="450"
+       loading="lazy"&gt;
+  &lt;figcaption&gt;
+    Fig. 1 — Diagrama de HTML
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</pre>
+      </div>
+      <div id="img1t-dem" class="tab-panel">
+        <div class="Información">
+          <figure>
+            <img src="https://storage.googleapis.com/gx-global-cms/mkt/cdc8836e-f220-48ed-a5fb-1e09de5bb46f.jpg"
+                 alt="Foto de ejemplo"
+                 style="width:100%;border-radius:4px"
+                 loading="lazy">
+            <figcaption>Fig. 1 — Ejemplo de &lt;figure&gt;</figcaption>
+          </figure>
         </div>
-    </body>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;video&gt; &lt;audio&gt; &lt;source&gt;</span>
+      <h3>Video y audio nativos</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Permiten embeber medios sin plugins. &lt;source&gt; ofrece múltiples formatos para compatibilidad entre navegadores.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'vid1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'vid1t','dem')">Información</button>
+      </div>
+      <div id="vid1t-sin" class="tab-panel active">
+<pre>&lt;video controls width="640" poster="mini.jpg"&gt;
+  &lt;source src="video.mp4"  type="video/mp4"&gt;
+  &lt;source src="video.webm" type="video/webm"&gt;
+  Tu navegador no soporta HTML5 video.
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</pre>
+      </div>
+      <div id="vid1t-dem" class="tab-panel">
+        <div class="Información">
+          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Video de ejemplo"
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+                    allowfullscreen
+                    loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;details&gt; &lt;summary&gt;</span>
+      <h3>Contenido desplegable</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Crea un acordeón interactivo sin JavaScript. &lt;summary&gt; es el encabezado visible; el resto se muestra u oculta al hacer clic.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'det1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'det1t','dem')">Información</button>
+      </div>
+      <div id="det1t-sin" class="tab-panel active">
+<pre>&lt;details&gt;
+  &lt;summary&gt;¿Qué es HTML?&lt;/summary&gt;
+  &lt;p&gt;HTML es el lenguaje estándar
+     para crear páginas web.&lt;/p&gt;
+&lt;/details&gt;</pre>
+      </div>
+      <div id="det1t-dem" class="tab-panel">
+        <div class="Información">
+          <details>
+            <summary>¿Qué es HTML? (haz clic para expandir)</summary>
+            <p style="margin-top:8px">HTML es el lenguaje estándar para crear páginas web. Define la estructura del contenido mediante etiquetas.</p>
+          </details>
+          <details>
+            <summary>¿Qué es CSS?</summary>
+            <p style="margin-top:8px">CSS controla la presentación visual de los documentos HTML.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="tablas.html">← Anterior: Tablas</a>
+    <a href="practica.html">Siguiente: Práctica →</a>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <p>Etiquetas HTML explicadas por categorías</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
 </html>

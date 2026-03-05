@@ -1,43 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formularios — Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Etiquetas HTML</title>
-        <link rel="stylesheet" href="Style.css">
-        <!--CSS para el booststrap-->
-        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+<header>
+  <h1>Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
 
-    </head>
-    <body>
-        <!--Opciones de busqueda-->
-        
-            <nav class="navbar bg-body-tertiary">
-            <form class="container-fluid justify-content-start">
-                <a class="btn btn-lg btn-outline-success me-2" href="./index.html">Inicio</a>
-                <div class="Centrar">
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./estructurales.html">Estructurales</a> 
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./texto.html">Texto</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./listas.html">Listas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./formularios.html">Formularios</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./tablas.html">Tablas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./multimedia.html">Multimedia</a>
-                </div>
-            </form>
-            </nav>
-        <div class="body">    
-            <!--Contenido-->
-            <div id="contenido">
-                <h1 class="Centrar">¿Que es una etiqueta en HTML?</h1>
-                <h3>Una etiqueta HTML es una instrucción que le dice al navegador qué es cada parte del contenido. No le dice solo “muéstralo bonito”, le dice “esto es un título”, “esto es un párrafo”, “esto es navegación”, “esto es una imagen”, “esto es un formulario”.</h3>
-                <br>
-                <h3>HTML no diseña. HTML describe. Es lenguaje estructural, no decorativo.</h3>
-            
-            
-            </div>
-            <!--JavaScript para el booststrap-->
-            <link rel="stylesheet" href="bootstrap-5.3.8-dist/js/bootstrap.min.js">
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html">Estructurales</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html" class="active">Formularios</a>
+  <a href="tablas.html">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html">Práctica</a>
+</nav>
+
+<main>
+<section class="categoria">
+  <h2 class="categoria-titulo">Etiquetas de Formularios</h2>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;form&gt; &lt;input&gt; &lt;label&gt;</span>
+      <h3>Formulario básico</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> &lt;form&gt; agrupa controles de entrada. &lt;input&gt; captura datos según su atributo type. &lt;label&gt; asocia texto descriptivo al control.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'frm1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'frm1t','dem')">Información</button>
+      </div>
+      <div id="frm1t-sin" class="tab-panel active">
+<pre>&lt;form action="/enviar" method="POST"&gt;
+  &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+  &lt;input type="text" id="nombre"
+         name="nombre" required
+         placeholder="Tu nombre"&gt;
+
+  &lt;label for="email"&gt;Correo:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;
+
+  &lt;input type="submit" value="Enviar"&gt;
+&lt;/form&gt;</pre>
+      </div>
+      <div id="frm1t-dem" class="tab-panel">
+        <div class="Información">
+          <form onsubmit="return false">
+            <label>Nombre<input type="text" placeholder="Ana García"></label>
+            <label>Correo<input type="email" placeholder="ana@ejemplo.com"></label>
+            <button type="submit">Enviar</button>
+          </form>
         </div>
-    </body>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;textarea&gt; &lt;select&gt; &lt;option&gt; &lt;button&gt;</span>
+      <h3>Controles avanzados</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> &lt;textarea&gt; para texto largo; &lt;select&gt; para menús desplegables; &lt;button&gt; para acciones más flexibles.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'frm2t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'frm2t','dem')">Información</button>
+      </div>
+      <div id="frm2t-sin" class="tab-panel active">
+<pre>&lt;textarea name="mensaje" rows="4"&gt;&lt;/textarea&gt;
+
+&lt;select name="nivel"&gt;
+  &lt;option value="basico"&gt;Básico&lt;/option&gt;
+  &lt;option value="avanzado"&gt;Avanzado&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;button type="submit"&gt;Enviar&lt;/button&gt;</pre>
+      </div>
+      <div id="frm2t-dem" class="tab-panel">
+        <div class="Información">
+          <form onsubmit="return false">
+            <label>Mensaje<textarea rows="3" placeholder="Escribe aquí..."></textarea></label>
+            <label>Nivel
+              <select>
+                <option>Básico</option>
+                <option>Intermedio</option>
+                <option>Avanzado</option>
+              </select>
+            </label>
+            <button>Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="listas.html">← Anterior: Listas</a>
+    <a href="tablas.html">Siguiente: Tablas →</a>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <p>Etiquetas HTML explicadas por categorías</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
 </html>

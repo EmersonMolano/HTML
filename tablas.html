@@ -1,43 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas — Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Etiquetas HTML</title>
-        <link rel="stylesheet" href="Style.css">
-        <!--CSS para el booststrap-->
-        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+<header>
+  <h1>Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
 
-    </head>
-    <body>
-        <!--Opciones de busqueda-->
-        
-            <nav class="navbar bg-body-tertiary">
-            <form class="container-fluid justify-content-start">
-                <a class="btn btn-lg btn-outline-success me-2" href="./index.html">Inicio</a>
-                <div class="Centrar">
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./estructurales.html">Estructurales</a> 
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./texto.html">Texto</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./listas.html">Listas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./formularios.html">Formularios</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./tablas.html">Tablas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./multimedia.html">Multimedia</a>
-                </div>
-            </form>
-            </nav>
-        <div class="body">    
-            <!--Contenido-->
-            <div id="contenido">
-                <h1 class="Centrar">¿Que es una etiqueta en HTML?</h1>
-                <h3>Una etiqueta HTML es una instrucción que le dice al navegador qué es cada parte del contenido. No le dice solo “muéstralo bonito”, le dice “esto es un título”, “esto es un párrafo”, “esto es navegación”, “esto es una imagen”, “esto es un formulario”.</h3>
-                <br>
-                <h3>HTML no diseña. HTML describe. Es lenguaje estructural, no decorativo.</h3>
-            
-            
-            </div>
-            <!--JavaScript para el booststrap-->
-            <link rel="stylesheet" href="bootstrap-5.3.8-dist/js/bootstrap.min.js">
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html">Estructurales</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html">Formularios</a>
+  <a href="tablas.html" class="active">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html">Práctica</a>
+</nav>
+
+<main>
+<section class="categoria">
+  <h2 class="categoria-titulo">Etiquetas de Tablas</h2>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;table&gt; &lt;thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt; &lt;caption&gt;</span>
+      <h3>Tabla de datos completa</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Estructuran datos tabulares. &lt;thead&gt; para encabezados, &lt;tbody&gt; para datos, &lt;th&gt; para celdas de cabecera y &lt;td&gt; para datos.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'tbl1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'tbl1t','dem')">Información</button>
+      </div>
+      <div id="tbl1t-sin" class="tab-panel active">
+<pre>&lt;table&gt;
+  &lt;caption&gt;Tecnologías Web&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Lenguaje&lt;/th&gt;
+      &lt;th scope="col"&gt;Tipo&lt;/th&gt;
+      &lt;th scope="col"&gt;Año&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HTML5&lt;/td&gt;
+      &lt;td&gt;Marcado&lt;/td&gt;
+      &lt;td&gt;2014&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+      </div>
+      <div id="tbl1t-dem" class="tab-panel">
+        <div class="Información">
+          <table>
+            <caption style="text-align:left;font-size:0.85rem;color:#666;margin-bottom:6px">Tecnologías Web Frontend</caption>
+            <thead>
+              <tr><th>Lenguaje</th><th>Tipo</th><th>Año</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>HTML5</td><td>Marcado</td><td>2014</td></tr>
+              <tr><td>CSS3</td><td>Estilo</td><td>2011</td></tr>
+              <tr><td>JavaScript</td><td>Programación</td><td>1995</td></tr>
+            </tbody>
+          </table>
         </div>
-    </body>
+      </div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="formularios.html">← Anterior: Formularios</a>
+    <a href="multimedia.html">Siguiente: Multimedia →</a>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <p>Etiquetas HTML explicadas por categorías</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
 </html>

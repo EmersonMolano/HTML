@@ -1,43 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Texto — Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Etiquetas HTML</title>
-        <link rel="stylesheet" href="Style.css">
-        <!--CSS para el booststrap-->
-        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+<header>
+  <h1>Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
 
-    </head>
-    <body>
-        <!--Opciones de busqueda-->
-        
-            <nav class="navbar bg-body-tertiary">
-            <form class="container-fluid justify-content-start">
-                <a class="btn btn-lg btn-outline-success me-2" href="./index.html">Inicio</a>
-                <div class="Centrar">
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./estructurales.html">Estructurales</a> 
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./texto.html">Texto</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./listas.html">Listas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./formularios.html">Formularios</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./tablas.html">Tablas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./multimedia.html">Multimedia</a>
-                </div>
-            </form>
-            </nav>
-        <div class="body">    
-            <!--Contenido-->
-            <div id="contenido">
-                <h1 class="Centrar">¿Que es una etiqueta en HTML?</h1>
-                <h3>Una etiqueta HTML es una instrucción que le dice al navegador qué es cada parte del contenido. No le dice solo “muéstralo bonito”, le dice “esto es un título”, “esto es un párrafo”, “esto es navegación”, “esto es una imagen”, “esto es un formulario”.</h3>
-                <br>
-                <h3>HTML no diseña. HTML describe. Es lenguaje estructural, no decorativo.</h3>
-            
-            
-            </div>
-            <!--JavaScript para el booststrap-->
-            <link rel="stylesheet" href="bootstrap-5.3.8-dist/js/bootstrap.min.js">
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html">Estructurales</a>
+  <a href="texto.html" class="active">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html">Formularios</a>
+  <a href="tablas.html">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html">Práctica</a>
+</nav>
+
+<main>
+<section class="categoria">
+  <h2 class="categoria-titulo">Etiquetas de Texto</h2>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;h1&gt; — &lt;h6&gt;</span>
+      <h3>Encabezados</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Definen la jerarquía de títulos, del más importante (h1) al menos relevante (h6). Son clave para SEO y accesibilidad.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'h1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'h1t','dem')">Información</button>
+      </div>
+      <div id="h1t-sin" class="tab-panel active">
+<pre>&lt;h1&gt;Título principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo de sección&lt;/h2&gt;
+&lt;h3&gt;Apartado&lt;/h3&gt;
+&lt;h4&gt;Sub-apartado&lt;/h4&gt;</pre>
+      </div>
+      <div id="h1t-dem" class="tab-panel">
+        <div class="Información">
+          <h1>H1 — Título Principal</h1>
+          <h2>H2 — Subtítulo</h2>
+          <h3>H3 — Apartado</h3>
+          <h4>H4 — Sub-apartado</h4>
         </div>
-    </body>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;p&gt; &lt;strong&gt; &lt;em&gt; &lt;mark&gt; &lt;code&gt; &lt;a&gt; &lt;blockquote&gt;</span>
+      <h3>Párrafo, énfasis y citas</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Etiquetas de nivel de frase para añadir significado: importancia, énfasis, resaltado, código en línea, enlaces y citas.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'p1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'p1t','dem')">Información</button>
+      </div>
+      <div id="p1t-sin" class="tab-panel active">
+<pre>&lt;p&gt;Aprende &lt;strong&gt;HTML5&lt;/strong&gt; con énfasis
+&lt;em&gt;semántico&lt;/em&gt;. Usa &lt;mark&gt;resaltado&lt;/mark&gt;.
+El atributo &lt;code&gt;href&lt;/code&gt; crea enlaces.&lt;/p&gt;
+
+&lt;a href="https://ejemplo.com" target="_blank"
+   rel="noopener noreferrer"&gt;Visitar sitio&lt;/a&gt;
+
+&lt;blockquote cite="https://fuente.com"&gt;
+  &lt;p&gt;"El conocimiento es poder."&lt;/p&gt;
+&lt;/blockquote&gt;</pre>
+      </div>
+      <div id="p1t-dem" class="tab-panel">
+        <div class="Información">
+          <p>Aprende <strong>HTML5</strong> con énfasis <em>semántico</em>. Usa <mark>resaltado</mark>. El atributo <code>href</code> crea enlaces.</p>
+          <p><a href="#">→ Visitar sitio externo</a></p>
+          <blockquote><p>"El conocimiento es poder." — Francis Bacon</p></blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="estructura.html">← Anterior: Estructura</a>
+    <a href="listas.html">Siguiente: Listas →</a>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <p>Etiquetas HTML explicadas por categorías</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
 </html>

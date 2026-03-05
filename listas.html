@@ -1,43 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listas — Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Etiquetas HTML</title>
-        <link rel="stylesheet" href="Style.css">
-        <!--CSS para el booststrap-->
-        <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+<header>
+  <h1>Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
 
-    </head>
-    <body>
-        <!--Opciones de busqueda-->
-        
-            <nav class="navbar bg-body-tertiary">
-            <form class="container-fluid justify-content-start">
-                <a class="btn btn-lg btn-outline-success me-2" href="./index.html">Inicio</a>
-                <div class="Centrar">
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./estructurales.html">Estructurales</a> 
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./texto.html">Texto</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./listas.html">Listas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./formularios.html">Formularios</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./tablas.html">Tablas</a>
-                    <a class="btn btn-lg btn-outline-secondary me-2" href="./multimedia.html">Multimedia</a>
-                </div>
-            </form>
-            </nav>
-        <div class="body">    
-            <!--Contenido-->
-            <div id="contenido">
-                <h1 class="Centrar">¿Que es una etiqueta en HTML?</h1>
-                <h3>Una etiqueta HTML es una instrucción que le dice al navegador qué es cada parte del contenido. No le dice solo “muéstralo bonito”, le dice “esto es un título”, “esto es un párrafo”, “esto es navegación”, “esto es una imagen”, “esto es un formulario”.</h3>
-                <br>
-                <h3>HTML no diseña. HTML describe. Es lenguaje estructural, no decorativo.</h3>
-            
-            
-            </div>
-            <!--JavaScript para el booststrap-->
-            <link rel="stylesheet" href="bootstrap-5.3.8-dist/js/bootstrap.min.js">
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html">Estructurales</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html" class="active">Listas</a>
+  <a href="formularios.html">Formularios</a>
+  <a href="tablas.html">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html">Práctica</a>
+</nav>
+
+<main>
+<section class="categoria">
+  <h2 class="categoria-titulo">Etiquetas de Listas</h2>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;ul&gt; &lt;ol&gt; &lt;li&gt;</span>
+      <h3>Listas ordenadas y desordenadas</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong color="red">Definición:</strong> &lt;ul&gt; crea listas con viñetas; &lt;ol&gt; listas numeradas; &lt;li&gt; define cada ítem.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'ul1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'ul1t','dem')">Información</button>
+      </div>
+      <div id="ul1t-sin" class="tab-panel active">
+<pre>&lt;!-- Desordenada --&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordenada --&gt;
+&lt;ol&gt;
+  &lt;li&gt;Instalar editor&lt;/li&gt;
+  &lt;li&gt;Crear index.html&lt;/li&gt;
+  &lt;li&gt;Abrir en el navegador&lt;/li&gt;
+&lt;/ol&gt;</pre>
+      </div>
+      <div id="ul1t-dem" class="tab-panel">
+        <div class="Información" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div>
+            <p><strong>Desordenada:</strong></p>
+            <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </div>
+          <div>
+            <p><strong>Ordenada:</strong></p>
+            <ol><li>Instalar editor</li><li>Crear archivo</li><li>Ver en navegador</li></ol>
+          </div>
         </div>
-    </body>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</span>
+      <h3>Lista de definición</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Agrupa pares término–descripción. Ideal para glosarios y especificaciones técnicas.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'dl1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'dl1t','dem')">Información</button>
+      </div>
+      <div id="dl1t-sin" class="tab-panel active">
+<pre>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+      </div>
+      <div id="dl1t-dem" class="tab-panel">
+        <div class="Información">
+          <dl>
+            <dt>HTML</dt><dd>HyperText Markup Language</dd>
+            <dt>CSS</dt><dd>Cascading Style Sheets</dd>
+            <dt>JS</dt><dd>JavaScript</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="texto.html">← Anterior: Texto</a>
+    <a href="formularios.html">Siguiente: Formularios →</a>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <p>Etiquetas HTML explicadas por categorías</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
 </html>

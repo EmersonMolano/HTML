@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica — Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html">Estructurales</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html">Formularios</a>
+  <a href="tablas.html">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html" class="active">Práctica</a>
+</nav>
+
+<main>
+  <div class="form-section">
+    <div class="form-section-header">
+      <h2>Formulario de Práctica</h2>
+      <p>Formulario funcional con las principales etiquetas de captura de datos en HTML5.</p>
+    </div>
+    <div class="form-body" id="practiceForm">
+
+      <div class="fg">
+        <label for="pNombre">Nombre completo *</label>
+        <input type="text" id="pNombre" name="nombre" placeholder="Ana García" required>
+      </div>
+
+      <div class="fg">
+        <label for="pEmail">Correo electrónico *</label>
+        <input type="email" id="pEmail" name="email" placeholder="ana@ejemplo.com" required>
+      </div>
+
+      <div class="fg">
+        <label for="pTel">Teléfono</label>
+        <input type="tel" id="pTel" name="telefono" placeholder="+57 300 000 0000">
+      </div>
+
+      <div class="fg">
+        <label for="pFecha">Fecha de nacimiento</label>
+        <input type="date" id="pFecha" name="fecha">
+      </div>
+
+      <div class="fg">
+        <label for="pNivel">Nivel de experiencia</label>
+        <select id="pNivel" name="nivel">
+          <option value="">— Selecciona —</option>
+          <option value="principiante">Principiante</option>
+          <option value="intermedio">Intermedio</option>
+          <option value="avanzado">Avanzado</option>
+        </select>
+      </div>
+
+      <div class="fg">
+        <label for="pUrl">Portafolio / URL</label>
+        <input type="url" id="pUrl" name="url" placeholder="https://mipagina.com">
+      </div>
+
+      <div class="fg full">
+        <label>Tecnologías favoritas</label>
+        <div class="check-group">
+          <label><input type="checkbox" name="tech" value="html"> HTML5</label>
+          <label><input type="checkbox" name="tech" value="css"> CSS3</label>
+          <label><input type="checkbox" name="tech" value="js"> JavaScript</label>
+          <label><input type="checkbox" name="tech" value="python"> Python</label>
+        </div>
+      </div>
+
+      <div class="fg full">
+        <label>Modalidad preferida</label>
+        <div class="radio-group">
+          <label><input type="radio" name="modalidad" value="virtual"> Virtual</label>
+          <label><input type="radio" name="modalidad" value="presencial"> Presencial</label>
+          <label><input type="radio" name="modalidad" value="hibrido"> Híbrido</label>
+        </div>
+      </div>
+
+      <div class="fg full">
+        <label for="pMensaje">Cuéntanos sobre ti *</label>
+        <textarea id="pMensaje" name="mensaje" rows="4" placeholder="¿Qué quieres aprender?..." required></textarea>
+      </div>
+
+      <div class="fg full" style="flex-direction:row;align-items:center;gap:8px">
+        <input type="checkbox" id="pTerminos" name="terminos" style="width:auto">
+        <label for="pTerminos" style="font-weight:normal;cursor:pointer">
+          Acepto los <a href="#" style="color:#2980b9">términos y condiciones</a>
+        </label>
+      </div>
+
+      <button class="btn-enviar" onclick="enviarFormulario()">Enviar inscripción</button>
+      <div class="form-msg" id="formMsg"></div>
+
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="multimedia.html">← Anterior: Multimedia</a>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</main>
+
+<footer>
+  <p>Etiquetas HTML explicadas por categorías</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
