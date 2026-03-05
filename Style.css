@@ -1,5 +1,21 @@
+/*Centra las imagenes y los textos*/
 .Centrar{
     text-align: center;
     width: 70%;
     margin: 0 auto;
+    line-height: 100px;
+}
+
+/*Auto ajusta el tipo de letra que se ve*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Aqui es donde se dejan esos espacion en los textos*/
+#contenido{
+    float:left;
+    width: calc(80% - 80px);
+    min-height: 500px;
+    padding: 100px;
+    
 }
