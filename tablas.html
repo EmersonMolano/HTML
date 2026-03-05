@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablas — Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html">Estructurales</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html">Formularios</a>
+  <a href="tablas.html" class="active">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html">Práctica</a>
+</nav>
+
+<main>
+<section class="categoria">
+  <h2 class="categoria-titulo">Etiquetas de Tablas</h2>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;table&gt; &lt;thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt; &lt;caption&gt;</span>
+      <h3>Tabla de datos completa</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Estructuran datos tabulares. &lt;thead&gt; para encabezados, &lt;tbody&gt; para datos, &lt;th&gt; para celdas de cabecera y &lt;td&gt; para datos.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'tbl1t','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'tbl1t','dem')">Información</button>
+      </div>
+      <div id="tbl1t-sin" class="tab-panel active">
+<pre>&lt;table&gt;
+  &lt;caption&gt;Tecnologías Web&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Lenguaje&lt;/th&gt;
+      &lt;th scope="col"&gt;Tipo&lt;/th&gt;
+      &lt;th scope="col"&gt;Año&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HTML5&lt;/td&gt;
+      &lt;td&gt;Marcado&lt;/td&gt;
+      &lt;td&gt;2014&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+      </div>
+      <div id="tbl1t-dem" class="tab-panel">
+        <div class="Información">
+          <table>
+            <caption style="text-align:left;font-size:0.85rem;color:#666;margin-bottom:6px">Tecnologías Web Frontend</caption>
+            <thead>
+              <tr><th>Lenguaje</th><th>Tipo</th><th>Año</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>HTML5</td><td>Marcado</td><td>2014</td></tr>
+              <tr><td>CSS3</td><td>Estilo</td><td>2011</td></tr>
+              <tr><td>JavaScript</td><td>Programación</td><td>1995</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="formularios.html">← Anterior: Formularios</a>
+    <a href="multimedia.html">Siguiente: Multimedia →</a>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <p>Etiquetas HTML explicadas por categorías</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

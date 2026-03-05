@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura — Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1> Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
+
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html" class="active">Estructurales</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html">Formularios</a>
+  <a href="tablas.html">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html">Práctica</a>
+</nav>
+
+<main>
+<section class="categoria">
+  <h2 class="categoria-titulo">Etiquetas Estructurales</h2>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;html&gt;</span>
+      <h3>Elemento raíz del documento</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Es la etiqueta raíz que envuelve todo el contenido del documento HTML.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'html1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'html1','dem')">Información</button>
+      </div>
+      <div id="html1-sin" class="tab-panel active">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;</pre>
+      </div>
+      <div id="html1-dem" class="tab-panel">
+        <div class="Información"><p>Todo el contenido va dentro de <code>&lt;html&gt;</code>. El atributo <code>lang="es"</code> indica el idioma del documento.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;header&gt; &lt;nav&gt; &lt;main&gt; &lt;section&gt; &lt;article&gt; &lt;aside&gt; &lt;footer&gt;</span>
+      <h3>Elementos semánticos de sección</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Dividen la página en regiones con significado: encabezado, navegación, contenido principal, secciones, artículos, contenido lateral y pie de página.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'sem1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'sem1','dem')">Información</button>
+      </div>
+      <div id="sem1-sin" class="tab-panel active">
+<pre>&lt;header&gt;
+  &lt;h1&gt;Mi Sitio&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;a href="/"&gt;Inicio&lt;/a&gt;
+    &lt;a href="/blog"&gt;Blog&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Artículo&lt;/h2&gt;
+      &lt;p&gt;Contenido...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+  &lt;aside&gt;Contenido relacionado&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;© 2025&lt;/footer&gt;</pre>
+      </div>
+      <div id="sem1-dem" class="tab-panel">
+        <div class="Información" style="font-size:0.85rem">
+          <div style="background:#2c3e50;color:white;padding:8px;border-radius:4px 4px 0 0">&lt;header&gt; — Encabezado</div>
+          <div style="display:grid;grid-template-columns:2fr 1fr;gap:6px;margin-top:6px">
+            <div style="background:#eaf2fb;padding:8px;border-radius:4px">&lt;main&gt; → &lt;section&gt; → &lt;article&gt;</div>
+            <div style="background:#fef9e7;padding:8px;border-radius:4px">&lt;aside&gt;</div>
+          </div>
+          <div style="background:#ecf0f1;padding:8px;border-radius:0 0 4px 4px;margin-top:6px">&lt;footer&gt;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="index.html" class="vacio">← Anterior</a>
+    <a href="texto.html">Siguiente: Texto →</a>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <p>Etiquetas HTML explicadas por categorías</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
