@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html" class="active">Estructura</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html">Formularios</a>
+  <a href="tablas.html">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html">Práctica</a>
+</nav>
+<main>
+<section class="categoria">
+  <h2 class="categoria-titulo">Etiquetas de Estructura</h2>
+
+  <!-- 1. header -->
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;header&gt;</span>
+      <h3>Encabezado de página o sección</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Representa el encabezado introductorio de una página o sección. Suele contener el logo, título principal y navegación.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'header1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'header1','dem')">Información</button>
+      </div>
+      <div id="header1-sin" class="tab-panel active">
+<pre>&lt;header&gt;
+  &lt;h1&gt;Mi Sitio Web&lt;/h1&gt;
+  &lt;p&gt;Bienvenido a mi página&lt;/p&gt;
+&lt;/header&gt;</pre>
+      </div>
+      <div id="header1-dem" class="tab-panel">
+        <div class="Información">
+          <div style="background:#2c3e50;color:white;padding:14px;border-radius:4px;text-align:center">
+            <strong>Mi Sitio Web</strong><br>
+            <small style="color:#bdc3c7">Bienvenido a mi página</small>
+          </div>
+          <p style="margin-top:10px;font-size:0.85rem;color:#888">Puede haber varios <code>&lt;header&gt;</code> en una página (uno por sección), pero solo uno como encabezado principal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. nav -->
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;nav&gt;</span>
+      <h3>Barra de navegación</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Agrupa los enlaces principales de navegación del sitio. Los lectores de pantalla lo identifican como zona de navegación.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'nav1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'nav1','dem')">Información</button>
+      </div>
+      <div id="nav1-sin" class="tab-panel active">
+<pre>&lt;nav&gt;
+  &lt;a href="/"&gt;Inicio&lt;/a&gt;
+  &lt;a href="/blog"&gt;Blog&lt;/a&gt;
+  &lt;a href="/contacto"&gt;Contacto&lt;/a&gt;
+&lt;/nav&gt;</pre>
+      </div>
+      <div id="nav1-dem" class="tab-panel">
+        <div class="Información">
+          <div style="background:#34495e;padding:10px 16px;border-radius:4px;display:flex;gap:10px;flex-wrap:wrap">
+            <a href="#" style="color:#ecf0f1;text-decoration:none;padding:4px 10px;border-radius:4px;background:#2980b9;font-size:0.85rem">Inicio</a>
+            <a href="#" style="color:#ecf0f1;text-decoration:none;padding:4px 10px;border-radius:4px;font-size:0.85rem">Blog</a>
+            <a href="#" style="color:#ecf0f1;text-decoration:none;padding:4px 10px;border-radius:4px;font-size:0.85rem">Contacto</a>
+          </div>
+          <p style="margin-top:10px;font-size:0.85rem;color:#888">No uses <code>&lt;nav&gt;</code> para todos los grupos de enlaces, solo para los bloques de navegación principales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. main -->
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;main&gt;</span>
+      <h3>Contenido principal</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Contiene el contenido dominante y único de la página. Solo debe existir uno por documento y no debe incluir elementos repetidos como nav o footer.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'main1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'main1','dem')">Información</button>
+      </div>
+      <div id="main1-sin" class="tab-panel active">
+<pre>&lt;body&gt;
+  &lt;header&gt;...&lt;/header&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+
+  &lt;main&gt;
+    &lt;h1&gt;Artículo principal&lt;/h1&gt;
+    &lt;p&gt;Contenido único de esta página.&lt;/p&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;</pre>
+      </div>
+      <div id="main1-dem" class="tab-panel">
+        <div class="Información">
+          <div style="border:2px dashed #2980b9;border-radius:4px;padding:14px;font-size:0.85rem">
+            <strong style="color:#2980b9">&lt;main&gt;</strong>
+            <p style="margin-top:6px">Todo el contenido principal y único de la página va aquí.</p>
+          </div>
+          <p style="margin-top:10px;font-size:0.85rem;color:#888">Solo un <code>&lt;main&gt;</code> por página. Ayuda a los lectores de pantalla a saltar directo al contenido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. footer -->
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;footer&gt;</span>
+      <h3>Pie de página o sección</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Representa el pie de una página o sección. Suele contener información de copyright, enlaces legales, contacto o créditos del autor.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'footer1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'footer1','dem')">Información</button>
+      </div>
+      <div id="footer1-sin" class="tab-panel active">
+<pre>&lt;footer&gt;
+  &lt;p&gt;© 2025 Mi Sitio Web. Todos los derechos reservados.&lt;/p&gt;
+  &lt;a href="/privacidad"&gt;Política de privacidad&lt;/a&gt;
+&lt;/footer&gt;</pre>
+      </div>
+      <div id="footer1-dem" class="tab-panel">
+        <div class="Información">
+          <div style="background:#2c3e50;color:#bdc3c7;padding:14px;border-radius:4px;text-align:center;font-size:0.85rem">
+            © 2025 Mi Sitio Web. Todos los derechos reservados.<br>
+            <a href="#" style="color:#2980b9;margin-top:4px;display:inline-block">Política de privacidad</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="index.html">← Inicio</a>
+    <a href="texto.html">Siguiente: Texto →</a>
+  </div>
+</section>
+</main>
+<footer>
+  <p>Blog Educativo — 20 Etiquetas HTML explicadas</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

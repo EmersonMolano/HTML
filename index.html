@@ -10,567 +10,111 @@
 
 <header>
   <h1>Etiquetas HTML</h1>
-  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos y buenas prácticas.</p>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
 </header>
 
 <nav>
-  <a href="#estructura">Estructura</a>
-  <a href="#texto">Texto</a>
-  <a href="#listas">Listas</a>
-  <a href="#formularios">Formularios</a>
-  <a href="#tablas">Tablas</a>
-  <a href="#multimedia">Multimedia</a>
-  <a href="#practica">Práctica</a>
+  <a href="index.html" class="active">Inicio</a>
+  <a href="estructura.html">Estructura</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html">Formularios</a>
+  <a href="tablas.html">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html">Práctica</a>
 </nav>
 
 <main>
+  <p class="section-label">Categorías de etiquetas</p>
+  <div class="cards-grid">
 
-<!-- 1. ESTRUCTURA -->
-<section id="estructura" class="categoria">
-  <h2 class="categoria-titulo"> Etiquetas Estructurales</h2>
+    <a href="estructura.html" class="card">
+      <div class="card-top">
+        <h2>Etiquetas Estructurales</h2>
+      </div>
+      <p>Define el esqueleto semántico de cualquier documento HTML moderno.</p>
+      <div class="card-tags">
+        <code>&lt;html&gt;</code><code>&lt;header&gt;</code><code>&lt;nav&gt;</code>
+        <code>&lt;main&gt;</code><code>&lt;section&gt;</code><code>&lt;footer&gt;</code>
+      </div>
+      <div class="card-link">Ver categoría →</div>
+    </a>
 
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;html&gt;</span>
-      <h3>Elemento raíz del documento</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Es la etiqueta raíz que envuelve todo el contenido del documento HTML.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'html1','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'html1','dem')">Demo</button>
+    <a href="texto.html" class="card">
+      <div class="card-top">
+        <h2>Etiquetas de Texto</h2>
       </div>
-      <div id="html1-sin" class="tab-panel active">
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang="es"&gt;
-  &lt;head&gt;...&lt;/head&gt;
-  &lt;body&gt;...&lt;/body&gt;
-&lt;/html&gt;</pre>
+      <p>Controlan la jerarquía, énfasis y semántica del contenido textual.</p>
+      <div class="card-tags">
+        <code>&lt;h1&gt;–&lt;h6&gt;</code><code>&lt;p&gt;</code><code>&lt;strong&gt;</code>
+        <code>&lt;em&gt;</code><code>&lt;mark&gt;</code><code>&lt;a&gt;</code>
       </div>
-      <div id="html1-dem" class="tab-panel">
-        <div class="demo"><p>Todo el contenido va dentro de <code>&lt;html&gt;</code>. El atributo <code>lang="es"</code> indica el idioma del documento.</p></div>
+      <div class="card-link">Ver categoría →</div>
+    </a>
+
+    <a href="listas.html" class="card">
+      <div class="card-top">
+        <h2>Etiquetas de Listas</h2>
       </div>
-    </div>
+      <p>Organizan elementos en colecciones ordenadas, desordenadas o de definición.</p>
+      <div class="card-tags">
+        <code>&lt;ul&gt;</code><code>&lt;ol&gt;</code><code>&lt;li&gt;</code>
+        <code>&lt;dl&gt;</code><code>&lt;dt&gt;</code><code>&lt;dd&gt;</code>
+      </div>
+      <div class="card-link">Ver categoría →</div>
+    </a>
+
+    <a href="formularios.html" class="card">
+      <div class="card-top">
+        <h2>Etiquetas de Formularios</h2>
+      </div>
+      <p>Permiten la captura de datos del usuario de forma estructurada.</p>
+      <div class="card-tags">
+        <code>&lt;form&gt;</code><code>&lt;input&gt;</code><code>&lt;label&gt;</code>
+        <code>&lt;select&gt;</code><code>&lt;textarea&gt;</code><code>&lt;button&gt;</code>
+      </div>
+      <div class="card-link">Ver categoría →</div>
+    </a>
+
+    <a href="tablas.html" class="card">
+      <div class="card-top">
+        <h2>Etiquetas de Tablas</h2>
+      </div>
+      <p>Estructuran datos tabulares en filas y columnas de forma semántica.</p>
+      <div class="card-tags">
+        <code>&lt;table&gt;</code><code>&lt;thead&gt;</code><code>&lt;tbody&gt;</code>
+        <code>&lt;tr&gt;</code><code>&lt;th&gt;</code><code>&lt;td&gt;</code>
+      </div>
+      <div class="card-link">Ver categoría →</div>
+    </a>
+
+    <a href="multimedia.html" class="card">
+      <div class="card-top">
+        <h2>Etiquetas Multimedia</h2>
+      </div>
+      <p>Integran imágenes, audio, video y contenido desplegable.</p>
+      <div class="card-tags">
+        <code>&lt;img&gt;</code><code>&lt;figure&gt;</code><code>&lt;video&gt;</code>
+        <code>&lt;audio&gt;</code><code>&lt;details&gt;</code><code>&lt;summary&gt;</code>
+      </div>
+      <div class="card-link">Ver categoría →</div>
+    </a>
+
   </div>
 
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;header&gt; &lt;nav&gt; &lt;main&gt; &lt;section&gt; &lt;article&gt; &lt;aside&gt; &lt;footer&gt;</span>
-      <h3>Elementos semánticos de sección</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Dividen la página en regiones con significado: encabezado, navegación, contenido principal, secciones, artículos, contenido lateral y pie de página.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'sem1','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'sem1','dem')">Demo</button>
-      </div>
-      <div id="sem1-sin" class="tab-panel active">
-<pre>&lt;header&gt;
-  &lt;h1&gt;Mi Sitio&lt;/h1&gt;
-  &lt;nav&gt;
-    &lt;a href="/"&gt;Inicio&lt;/a&gt;
-    &lt;a href="/blog"&gt;Blog&lt;/a&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
-&lt;main&gt;
-  &lt;section&gt;
-    &lt;article&gt;
-      &lt;h2&gt;Artículo&lt;/h2&gt;
-      &lt;p&gt;Contenido...&lt;/p&gt;
-    &lt;/article&gt;
-  &lt;/section&gt;
-  &lt;aside&gt;Contenido relacionado&lt;/aside&gt;
-&lt;/main&gt;
-&lt;footer&gt;© 2025&lt;/footer&gt;</pre>
-      </div>
-      <div id="sem1-dem" class="tab-panel">
-        <div class="demo" style="font-size:0.85rem">
-          <div style="background:#2c3e50;color:white;padding:8px;border-radius:4px 4px 0 0">&lt;header&gt; — Encabezado</div>
-          <div style="display:grid;grid-template-columns:2fr 1fr;gap:6px;margin-top:6px">
-            <div style="background:#eaf2fb;padding:8px;border-radius:4px">&lt;main&gt; → &lt;section&gt; → &lt;article&gt;</div>
-            <div style="background:#fef9e7;padding:8px;border-radius:4px">&lt;aside&gt;</div>
-          </div>
-          <div style="background:#ecf0f1;padding:8px;border-radius:0 0 4px 4px;margin-top:6px">&lt;footer&gt;</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 2. TEXTO -->
-<section id="texto" class="categoria">
-  <h2 class="categoria-titulo">Etiquetas de Texto</h2>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;h1&gt; — &lt;h6&gt;</span>
-      <h3>Encabezados</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Definen la jerarquía de títulos, del más importante (h1) al menos relevante (h6). Son clave para SEO y accesibilidad.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'h1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'h1t','dem')">Demo</button>
-      </div>
-      <div id="h1t-sin" class="tab-panel active">
-<pre>&lt;h1&gt;Título principal&lt;/h1&gt;
-&lt;h2&gt;Subtítulo de sección&lt;/h2&gt;
-&lt;h3&gt;Apartado&lt;/h3&gt;
-&lt;h4&gt;Sub-apartado&lt;/h4&gt;</pre>
-      </div>
-      <div id="h1t-dem" class="tab-panel">
-        <div class="demo">
-          <h1>H1 — Título Principal</h1>
-          <h2>H2 — Subtítulo</h2>
-          <h3>H3 — Apartado</h3>
-          <h4>H4 — Sub-apartado</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;p&gt; &lt;strong&gt; &lt;em&gt; &lt;mark&gt; &lt;code&gt; &lt;a&gt; &lt;blockquote&gt;</span>
-      <h3>Párrafo, énfasis y citas</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Etiquetas de nivel de frase para añadir significado: importancia, énfasis, resaltado, código en línea, enlaces y citas.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'p1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'p1t','dem')">Demo</button>
-      </div>
-      <div id="p1t-sin" class="tab-panel active">
-<pre>&lt;p&gt;Aprende &lt;strong&gt;HTML5&lt;/strong&gt; con énfasis
-&lt;em&gt;semántico&lt;/em&gt;. Usa &lt;mark&gt;resaltado&lt;/mark&gt;.
-El atributo &lt;code&gt;href&lt;/code&gt; crea enlaces.&lt;/p&gt;
-
-&lt;a href="https://ejemplo.com" target="_blank"
-   rel="noopener noreferrer"&gt;Visitar sitio&lt;/a&gt;
-
-&lt;blockquote cite="https://fuente.com"&gt;
-  &lt;p&gt;"El conocimiento es poder."&lt;/p&gt;
-&lt;/blockquote&gt;</pre>
-      </div>
-      <div id="p1t-dem" class="tab-panel">
-        <div class="demo">
-          <p>Aprende <strong>HTML5</strong> con énfasis <em>semántico</em>. Usa <mark>resaltado</mark>. El atributo <code>href</code> crea enlaces.</p>
-          <p><a href="#">→ Visitar sitio externo</a></p>
-          <blockquote><p>"El conocimiento es poder." — Francis Bacon</p></blockquote>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 3. LISTAS -->
-<section id="listas" class="categoria">
-  <h2 class="categoria-titulo">Etiquetas de Listas</h2>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;ul&gt; &lt;ol&gt; &lt;li&gt;</span>
-      <h3>Listas ordenadas y desordenadas</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> &lt;ul&gt; crea listas con viñetas; &lt;ol&gt; listas numeradas; &lt;li&gt; define cada ítem.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'ul1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'ul1t','dem')">Demo</button>
-      </div>
-      <div id="ul1t-sin" class="tab-panel active">
-<pre>&lt;!-- Desordenada --&gt;
-&lt;ul&gt;
-  &lt;li&gt;HTML&lt;/li&gt;
-  &lt;li&gt;CSS&lt;/li&gt;
-  &lt;li&gt;JavaScript&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- Ordenada --&gt;
-&lt;ol&gt;
-  &lt;li&gt;Instalar editor&lt;/li&gt;
-  &lt;li&gt;Crear index.html&lt;/li&gt;
-  &lt;li&gt;Abrir en el navegador&lt;/li&gt;
-&lt;/ol&gt;</pre>
-      </div>
-      <div id="ul1t-dem" class="tab-panel">
-        <div class="demo" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-          <div>
-            <p><strong>Desordenada:</strong></p>
-            <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          </div>
-          <div>
-            <p><strong>Ordenada:</strong></p>
-            <ol><li>Instalar editor</li><li>Crear archivo</li><li>Ver en navegador</li></ol>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</span>
-      <h3>Lista de definición</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Agrupa pares término–descripción. Ideal para glosarios y especificaciones técnicas.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'dl1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'dl1t','dem')">Demo</button>
-      </div>
-      <div id="dl1t-sin" class="tab-panel active">
-<pre>&lt;dl&gt;
-  &lt;dt&gt;HTML&lt;/dt&gt;
-  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
-
-  &lt;dt&gt;CSS&lt;/dt&gt;
-  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
-&lt;/dl&gt;</pre>
-      </div>
-      <div id="dl1t-dem" class="tab-panel">
-        <div class="demo">
-          <dl>
-            <dt>HTML</dt><dd>HyperText Markup Language</dd>
-            <dt>CSS</dt><dd>Cascading Style Sheets</dd>
-            <dt>JS</dt><dd>JavaScript</dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 4. FORMULARIOS -->
-<section id="formularios" class="categoria">
-  <h2 class="categoria-titulo">Etiquetas de Formularios</h2>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;form&gt; &lt;input&gt; &lt;label&gt;</span>
-      <h3>Formulario básico</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> &lt;form&gt; agrupa controles de entrada. &lt;input&gt; captura datos según su atributo type. &lt;label&gt; asocia texto descriptivo al control.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'frm1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'frm1t','dem')">Demo</button>
-      </div>
-      <div id="frm1t-sin" class="tab-panel active">
-<pre>&lt;form action="/enviar" method="POST"&gt;
-  &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
-  &lt;input type="text" id="nombre"
-         name="nombre" required
-         placeholder="Tu nombre"&gt;
-
-  &lt;label for="email"&gt;Correo:&lt;/label&gt;
-  &lt;input type="email" id="email" name="email"&gt;
-
-  &lt;input type="submit" value="Enviar"&gt;
-&lt;/form&gt;</pre>
-      </div>
-      <div id="frm1t-dem" class="tab-panel">
-        <div class="demo">
-          <form onsubmit="return false">
-            <label>Nombre<input type="text" placeholder="Ana García"></label>
-            <label>Correo<input type="email" placeholder="ana@ejemplo.com"></label>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;textarea&gt; &lt;select&gt; &lt;option&gt; &lt;button&gt;</span>
-      <h3>Controles avanzados</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> &lt;textarea&gt; para texto largo; &lt;select&gt; para menús desplegables; &lt;button&gt; para acciones más flexibles.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'frm2t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'frm2t','dem')">Demo</button>
-      </div>
-      <div id="frm2t-sin" class="tab-panel active">
-<pre>&lt;textarea name="mensaje" rows="4"&gt;&lt;/textarea&gt;
-
-&lt;select name="nivel"&gt;
-  &lt;option value="basico"&gt;Básico&lt;/option&gt;
-  &lt;option value="avanzado"&gt;Avanzado&lt;/option&gt;
-&lt;/select&gt;
-
-&lt;button type="submit"&gt;Enviar&lt;/button&gt;</pre>
-      </div>
-      <div id="frm2t-dem" class="tab-panel">
-        <div class="demo">
-          <form onsubmit="return false">
-            <label>Mensaje<textarea rows="3" placeholder="Escribe aquí..."></textarea></label>
-            <label>Nivel
-              <select>
-                <option>Básico</option>
-                <option>Intermedio</option>
-                <option>Avanzado</option>
-              </select>
-            </label>
-            <button>Enviar mensaje</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 5. TABLAS -->
-<section id="tablas" class="categoria">
-  <h2 class="categoria-titulo">Etiquetas de Tablas</h2>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;table&gt; &lt;thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt; &lt;caption&gt;</span>
-      <h3>Tabla de datos completa</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Estructuran datos tabulares. &lt;thead&gt; para encabezados, &lt;tbody&gt; para datos, &lt;th&gt; para celdas de cabecera y &lt;td&gt; para datos.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'tbl1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'tbl1t','dem')">Demo</button>
-      </div>
-      <div id="tbl1t-sin" class="tab-panel active">
-<pre>&lt;table&gt;
-  &lt;caption&gt;Tecnologías Web&lt;/caption&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th scope="col"&gt;Lenguaje&lt;/th&gt;
-      &lt;th scope="col"&gt;Tipo&lt;/th&gt;
-      &lt;th scope="col"&gt;Año&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;HTML5&lt;/td&gt;
-      &lt;td&gt;Marcado&lt;/td&gt;
-      &lt;td&gt;2014&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-      </div>
-      <div id="tbl1t-dem" class="tab-panel">
-        <div class="demo">
-          <table>
-            <caption style="text-align:left;font-size:0.85rem;color:#666;margin-bottom:6px">Tecnologías Web Frontend</caption>
-            <thead>
-              <tr><th>Lenguaje</th><th>Tipo</th><th>Año</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>HTML5</td><td>Marcado</td><td>2014</td></tr>
-              <tr><td>CSS3</td><td>Estilo</td><td>2011</td></tr>
-              <tr><td>JavaScript</td><td>Programación</td><td>1995</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 6. MULTIMEDIA -->
-<section id="multimedia" class="categoria">
-  <h2 class="categoria-titulo">Etiquetas Multimedia</h2>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;img&gt; &lt;figure&gt; &lt;figcaption&gt;</span>
-      <h3>Imagen con contexto</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> &lt;img&gt; inserta imágenes. &lt;figure&gt; y &lt;figcaption&gt; dan contexto semántico relacionando la imagen con su descripción.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'img1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'img1t','dem')">Demo</button>
-      </div>
-      <div id="img1t-sin" class="tab-panel active">
-<pre>&lt;figure&gt;
-  &lt;img src="foto.jpg"
-       alt="Descripción de la imagen"
-       width="800" height="450"
-       loading="lazy"&gt;
-  &lt;figcaption&gt;
-    Fig. 1 — Diagrama de HTML
-  &lt;/figcaption&gt;
-&lt;/figure&gt;</pre>
-      </div>
-      <div id="img1t-dem" class="tab-panel">
-        <div class="demo">
-          <figure>
-            <img src="https://storage.googleapis.com/gx-global-cms/mkt/cdc8836e-f220-48ed-a5fb-1e09de5bb46f.jpg"
-                 alt="Foto de ejemplo"
-                 style="width:100%;border-radius:4px"
-                 loading="lazy">
-            <figcaption>Fig. 1 — Ejemplo de &lt;figure&gt; con &lt;figcaption&gt;</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;video&gt; &lt;audio&gt; &lt;source&gt;</span>
-      <h3>Video y audio nativos</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Permiten embeber medios sin plugins. &lt;source&gt; ofrece múltiples formatos para compatibilidad entre navegadores.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'vid1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'vid1t','dem')">Demo</button>
-      </div>
-      <div id="vid1t-sin" class="tab-panel active">
-<pre>&lt;video controls width="640" poster="mini.jpg"&gt;
-  &lt;source src="video.mp4"  type="video/mp4"&gt;
-  &lt;source src="video.webm" type="video/webm"&gt;
-  Tu navegador no soporta HTML5 video.
-&lt;/video&gt;
-
-&lt;audio controls&gt;
-  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
-&lt;/audio&gt;</pre>
-      </div>
-      <div id="vid1t-dem" class="tab-panel">
-        <div class="demo">
-          <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:4px">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="Video de ejemplo"
-                    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
-                    allowfullscreen
-                    loading="lazy">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tarjeta">
-    <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;details&gt; &lt;summary&gt;</span>
-      <h3>Contenido desplegable</h3>
-    </div>
-    <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Crea un acordeón interactivo sin JavaScript. &lt;summary&gt; es el encabezado visible; el resto se muestra u oculta al hacer clic.</p>
-      <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'det1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'det1t','dem')">Demo</button>
-      </div>
-      <div id="det1t-sin" class="tab-panel active">
-<pre>&lt;details&gt;
-  &lt;summary&gt;¿Qué es HTML?&lt;/summary&gt;
-  &lt;p&gt;HTML es el lenguaje estándar
-     para crear páginas web.&lt;/p&gt;
-&lt;/details&gt;</pre>
-      </div>
-      <div id="det1t-dem" class="tab-panel">
-        <div class="demo">
-          <details>
-            <summary>¿Qué es HTML? (haz clic para expandir)</summary>
-            <p style="margin-top:8px">HTML es el lenguaje estándar para crear páginas web. Define la estructura del contenido mediante etiquetas.</p>
-          </details>
-          <details>
-            <summary>¿Qué es CSS?</summary>
-            <p style="margin-top:8px">CSS controla la presentación visual de los documentos HTML.</p>
-          </details>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FORMULARIO PRÁCTICO -->
-<section id="practica">
-  <div class="form-section">
-    <div class="form-section-header">
+  <p class="section-label" style="margin-top:40px">Actividad práctica</p>
+  <a href="practica.html" class="card" style="max-width:400px">
+    <div class="card-top">
       <h2>Formulario de Práctica</h2>
-      <p>Formulario funcional con las principales etiquetas de captura de datos en HTML5.</p>
     </div>
-    <div class="form-body" id="practiceForm">
-
-      <div class="fg">
-        <label for="pNombre">Nombre completo *</label>
-        <input type="text" id="pNombre" name="nombre" placeholder="Ana García" required>
-      </div>
-
-      <div class="fg">
-        <label for="pEmail">Correo electrónico *</label>
-        <input type="email" id="pEmail" name="email" placeholder="ana@ejemplo.com" required>
-      </div>
-
-      <div class="fg">
-        <label for="pTel">Teléfono</label>
-        <input type="tel" id="pTel" name="telefono" placeholder="+57 300 000 0000">
-      </div>
-
-      <div class="fg">
-        <label for="pFecha">Fecha de nacimiento</label>
-        <input type="date" id="pFecha" name="fecha">
-      </div>
-
-      <div class="fg">
-        <label for="pNivel">Nivel de experiencia</label>
-        <select id="pNivel" name="nivel">
-          <option value="">— Selecciona —</option>
-          <option value="principiante">Principiante</option>
-          <option value="intermedio">Intermedio</option>
-          <option value="avanzado">Avanzado</option>
-        </select>
-      </div>
-
-      <div class="fg">
-        <label for="pUrl">Portafolio / URL</label>
-        <input type="url" id="pUrl" name="url" placeholder="https://mipagina.com">
-      </div>
-
-      <div class="fg full">
-        <label>Tecnologías favoritas</label>
-        <div class="check-group">
-          <label><input type="checkbox" name="tech" value="html"> HTML5</label>
-          <label><input type="checkbox" name="tech" value="css"> CSS3</label>
-          <label><input type="checkbox" name="tech" value="js"> JavaScript</label>
-          <label><input type="checkbox" name="tech" value="python"> Python</label>
-        </div>
-      </div>
-
-      <div class="fg full">
-        <label>Modalidad preferida</label>
-        <div class="radio-group">
-          <label><input type="radio" name="modalidad" value="virtual"> Virtual</label>
-          <label><input type="radio" name="modalidad" value="presencial"> Presencial</label>
-          <label><input type="radio" name="modalidad" value="hibrido"> Híbrido</label>
-        </div>
-      </div>
-
-      <div class="fg full">
-        <label for="pMensaje">Cuéntanos sobre ti *</label>
-        <textarea id="pMensaje" name="mensaje" rows="4" placeholder="¿Qué quieres aprender?..." required></textarea>
-      </div>
-
-      <div class="fg full" style="flex-direction:row;align-items:center;gap:8px">
-        <input type="checkbox" id="pTerminos" name="terminos" style="width:auto">
-        <label for="pTerminos" style="font-weight:normal;cursor:pointer">
-          Acepto los <a href="#" style="color:#2980b9">términos y condiciones</a>
-        </label>
-      </div>
-
-      <button class="btn-enviar" onclick="enviarFormulario()">Enviar inscripción</button>
-      <div class="form-msg" id="formMsg"></div>
-
-    </div>
-  </div>
-</section>
+    <p>Pon en práctica todo lo aprendido con un formulario funcional completo.</p>
+    <div class="card-link">Ir al formulario →</div>
+  </a>
 
 </main>
 
 <footer>
-  <p>Blog Educativo de Etiquetas HTML — 25+ etiquetas explicadas por categorías</p>
+  <p>Etiquetas HTML explicadas por categorías</p>
 </footer>
 
 <script src="script.js"></script>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etiquetas HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Etiquetas HTML</h1>
+  <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
+</header>
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="estructura.html">Estructura</a>
+  <a href="texto.html">Texto</a>
+  <a href="listas.html">Listas</a>
+  <a href="formularios.html" class="active">Formularios</a>
+  <a href="tablas.html">Tablas</a>
+  <a href="multimedia.html">Multimedia</a>
+  <a href="practica.html">Práctica</a>
+</nav>
+<main>
+<section class="categoria">
+  <h2 class="categoria-titulo">Etiquetas de Formularios</h2>
+
+  <!-- 12. form -->
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;form&gt;</span>
+      <h3>Formulario</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Contenedor que agrupa todos los controles de entrada. Define a dónde se envían los datos (<code>action</code>) y cómo se envían (<code>method</code>: GET o POST).</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'form1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'form1','dem')">Información</button>
+      </div>
+      <div id="form1-sin" class="tab-panel active">
+<pre>&lt;form action="/enviar" method="POST"&gt;
+  &lt;!-- inputs, labels, botones van aquí --&gt;
+&lt;/form&gt;
+
+&lt;!-- GET: datos visibles en la URL (búsquedas) --&gt;
+&lt;form action="/buscar" method="GET"&gt;
+  &lt;input type="text" name="q"&gt;
+&lt;/form&gt;</pre>
+      </div>
+      <div id="form1-dem" class="tab-panel">
+        <div class="Información">
+          <p style="font-size:0.85rem">El atributo <code>action</code> define la URL a la que se envían los datos. <code>method="POST"</code> los envía en el cuerpo de la petición (datos sensibles). <code>method="GET"</code> los añade a la URL (búsquedas).</p>
+          <p style="margin-top:8px;font-size:0.85rem;color:#888">Usa siempre <code>POST</code> para contraseñas o datos personales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13. label -->
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;label&gt;</span>
+      <h3>Etiqueta de campo</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Asocia un texto descriptivo a un control de formulario. Al hacer clic en el label, el campo correspondiente recibe el foco automáticamente.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'label1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'label1','dem')">Información</button>
+      </div>
+      <div id="label1-sin" class="tab-panel active">
+<pre>&lt;!-- Asociado por 'for' + 'id' --&gt;
+&lt;label for="nombre"&gt;Nombre completo:&lt;/label&gt;
+&lt;input type="text" id="nombre" name="nombre"&gt;
+
+&lt;!-- Asociado por anidamiento --&gt;
+&lt;label&gt;
+  Correo electrónico:
+  &lt;input type="email" name="email"&gt;
+&lt;/label&gt;</pre>
+      </div>
+      <div id="label1-dem" class="tab-panel">
+        <div class="Información">
+          <form onsubmit="return false">
+            <label style="display:flex;flex-direction:column;gap:4px;font-size:0.85rem;color:#555;font-weight:bold">
+              Nombre completo:
+              <input type="text" placeholder="Ana García" style="padding:6px;border:1px solid #ccc;border-radius:4px">
+            </label>
+          </form>
+          <p style="margin-top:8px;font-size:0.85rem;color:#888">El <code>&lt;label&gt;</code> es fundamental para accesibilidad. Sin él, los lectores de pantalla no saben a qué pertenece el campo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 14. input -->
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;input&gt;</span>
+      <h3>Campo de entrada</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> El elemento más versátil de formularios. Su comportamiento cambia completamente según el atributo <code>type</code>. Es una etiqueta vacía (sin cierre).</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'input1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'input1','dem')">Información</button>
+      </div>
+      <div id="input1-sin" class="tab-panel active">
+<pre>&lt;input type="text"     placeholder="Texto libre"&gt;
+&lt;input type="email"    placeholder="correo@ejemplo.com"&gt;
+&lt;input type="password" placeholder="Contraseña"&gt;
+&lt;input type="number"   min="0" max="100"&gt;
+&lt;input type="date"&gt;
+&lt;input type="checkbox" name="acepto"&gt;
+&lt;input type="radio"    name="opcion" value="a"&gt;
+&lt;input type="file"     accept=".pdf,.jpg"&gt;
+&lt;input type="submit"   value="Enviar"&gt;</pre>
+      </div>
+      <div id="input1-dem" class="tab-panel">
+        <div class="Información">
+          <form onsubmit="return false" style="display:flex;flex-direction:column;gap:8px">
+            <input type="text"     placeholder="text — Texto libre" style="padding:6px;border:1px solid #ccc;border-radius:4px">
+            <input type="email"    placeholder="email — correo@ejemplo.com" style="padding:6px;border:1px solid #ccc;border-radius:4px">
+            <input type="password" placeholder="password — Contraseña" style="padding:6px;border:1px solid #ccc;border-radius:4px">
+            <input type="number"   placeholder="number — 0 a 100" min="0" max="100" style="padding:6px;border:1px solid #ccc;border-radius:4px">
+            <input type="date" style="padding:6px;border:1px solid #ccc;border-radius:4px">
+            <label style="display:flex;align-items:center;gap:6px;font-size:0.85rem"><input type="checkbox"> checkbox — Casilla de verificación</label>
+            <label style="display:flex;align-items:center;gap:6px;font-size:0.85rem"><input type="radio" name="r"> radio — Opción única</label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15. textarea -->
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;textarea&gt;</span>
+      <h3>Área de texto</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Campo de texto de múltiples líneas. El usuario puede redimensionarlo. Se definen las filas visibles con <code>rows</code> y el ancho con <code>cols</code>.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'textarea1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'textarea1','dem')">Información</button>
+      </div>
+      <div id="textarea1-sin" class="tab-panel active">
+<pre>&lt;label for="mensaje"&gt;Tu mensaje:&lt;/label&gt;
+&lt;textarea id="mensaje" name="mensaje"
+          rows="4" placeholder="Escribe aquí..."
+          maxlength="500"&gt;&lt;/textarea&gt;</pre>
+      </div>
+      <div id="textarea1-dem" class="tab-panel">
+        <div class="Información">
+          <form onsubmit="return false">
+            <label style="display:flex;flex-direction:column;gap:4px;font-size:0.85rem;font-weight:bold;color:#555">
+              Tu mensaje:
+              <textarea rows="3" placeholder="Escribe aquí..." style="padding:6px;border:1px solid #ccc;border-radius:4px;font-family:Arial;resize:vertical"></textarea>
+            </label>
+          </form>
+          <p style="margin-top:8px;font-size:0.85rem;color:#888">A diferencia de <code>&lt;input&gt;</code>, el contenido por defecto va entre las etiquetas, no en <code>value</code>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 16. button -->
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;button&gt;</span>
+      <h3>Botón</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Crea un botón interactivo. Más flexible que <code>&lt;input type="submit"&gt;</code> porque puede contener HTML (iconos, imágenes, texto formateado).</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'button1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'button1','dem')">Información</button>
+      </div>
+      <div id="button1-sin" class="tab-panel active">
+<pre>&lt;!-- Envía el formulario (por defecto) --&gt;
+&lt;button type="submit"&gt;Enviar formulario&lt;/button&gt;
+
+&lt;!-- Resetea los campos --&gt;
+&lt;button type="reset"&gt;Limpiar&lt;/button&gt;
+
+&lt;!-- Solo acción JS, no envía --&gt;
+&lt;button type="button" onclick="miFuncion()"&gt;
+  Acción personalizada
+&lt;/button&gt;</pre>
+      </div>
+      <div id="button1-dem" class="tab-panel">
+        <div class="Información" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+          <button style="background:#2980b9;color:white;border:none;padding:8px 16px;border-radius:4px;cursor:pointer">✔ Enviar</button>
+          <button style="background:#ecf0f1;color:#333;border:1px solid #ccc;padding:8px 16px;border-radius:4px;cursor:pointer">↺ Limpiar</button>
+          <button style="background:#27ae60;color:white;border:none;padding:8px 16px;border-radius:4px;cursor:pointer">⬇ Descargar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paginacion">
+    <a href="listas.html">← Anterior: Listas</a>
+    <a href="tablas.html">Siguiente: Tablas →</a>
+  </div>
+</section>
+</main>
+<footer>
+  <p>Blog Educativo — 20 Etiquetas HTML explicadas</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
