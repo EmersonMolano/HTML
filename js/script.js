@@ -42,3 +42,31 @@ function enviarFormulario() {
   msg.textContent      = '¡Gracias ' + nombre + '! Recibirás confirmación en ' + email + '.';
   msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
+
+// Botón volver arriba
+function actualizarBtnTop() {
+  const btn = document.getElementById('btnTop');
+  if (!btn) return;
+  const scrolled = window.pageYOffset
+    || document.documentElement.scrollTop
+    || document.body.scrollTop
+    || 0;
+  if (scrolled > 200) {
+    btn.style.opacity = '1';
+    btn.style.pointerEvents = 'auto';
+  } else {
+    btn.style.opacity = '0';
+    btn.style.pointerEvents = 'none';
+  }
+}
+
+window.addEventListener('scroll', actualizarBtnTop, true);
+document.addEventListener('scroll', actualizarBtnTop, true);
+window.addEventListener('load', actualizarBtnTop);
+
+// Renombrada a "irArriba" para evitar conflicto con la propiedad nativa scrollTop
+function irArriba() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.documentElement.scrollTop = 0;
+  document.body.scrollTop = 0;
+}
