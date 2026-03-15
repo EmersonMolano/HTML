@@ -43,28 +43,27 @@ function enviarFormulario() {
   msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
-// Botón volver arriba
-function actualizarBtnTop() {
+// Botón volver arriba — usa IntersectionObserver para detectar si el header es visible
+window.addEventListener('DOMContentLoaded', function () {
   const btn = document.getElementById('btnTop');
-  if (!btn) return;
-  const scrolled = window.pageYOffset
-    || document.documentElement.scrollTop
-    || document.body.scrollTop
-    || 0;
-  if (scrolled > 200) {
-    btn.style.opacity = '1';
-    btn.style.pointerEvents = 'auto';
-  } else {
-    btn.style.opacity = '0';
-    btn.style.pointerEvents = 'none';
-  }
-}
+  const header = document.querySelector('header');
+  if (!btn || !header) return;
 
-window.addEventListener('scroll', actualizarBtnTop, true);
-document.addEventListener('scroll', actualizarBtnTop, true);
-window.addEventListener('load', actualizarBtnTop);
+  const observer = new IntersectionObserver(function (entries) {
+    // Si el header NO es visible, el usuario bajó → mostrar botón
+    if (!entries[0].isIntersecting) {
+      btn.style.opacity = '1';
+      btn.style.pointerEvents = 'auto';
+    } else {
+      btn.style.opacity = '0';
+      btn.style.pointerEvents = 'none';
+    }
+  }, { threshold: 0 });
 
-// Renombrada a "irArriba" para evitar conflicto con la propiedad nativa scrollTop
+  observer.observe(header);
+});
+
+// Subir al tope
 function irArriba() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   document.documentElement.scrollTop = 0;

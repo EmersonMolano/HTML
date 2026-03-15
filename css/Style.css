@@ -4,8 +4,9 @@
   padding: 0;
 }
 
-html {
-  overflow-y: scroll;
+html, body {
+  height: auto;
+  min-height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -13,13 +14,10 @@ body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
   color: #333;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 main{
-  flex: 1;
+  min-height: calc(100vh - 200px);
 }
 
 /* HEADER */
