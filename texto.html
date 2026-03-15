@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Texto — Etiquetas HTML</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Etiquetas HTML</title>
+  <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
-
 <header>
   <h1>Etiquetas HTML</h1>
   <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
 </header>
-
 <nav>
   <a href="index.html">Inicio</a>
-  <a href="estructura.html">Estructurales</a>
+  <a href="estructura.html">Estructura</a>
   <a href="texto.html" class="active">Texto</a>
   <a href="listas.html">Listas</a>
   <a href="formularios.html">Formularios</a>
@@ -23,7 +21,6 @@
   <a href="multimedia.html">Multimedia</a>
   <a href="practica.html">Práctica</a>
 </nav>
-
 <main>
 <section class="categoria">
   <h2 class="categoria-titulo">Etiquetas de Texto</h2>
@@ -31,26 +28,31 @@
   <div class="tarjeta">
     <div class="tarjeta-header">
       <span class="etiqueta-nombre">&lt;h1&gt; — &lt;h6&gt;</span>
-      <h3>Encabezados</h3>
+      <h3>Encabezados jerárquicos</h3>
     </div>
     <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Definen la jerarquía de títulos, del más importante (h1) al menos relevante (h6). Son clave para SEO y accesibilidad.</p>
+      <p><strong>Definición:</strong> Definen los títulos del documento en 6 niveles de jerarquía. <code>&lt;h1&gt;</code> es el más importante (uno por página) y <code>&lt;h6&gt;</code> el menos relevante.</p>
       <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'h1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'h1t','dem')">Información</button>
+        <button class="tab-btn active" onclick="tab(this,'h1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'h1','dem')">Información</button>
       </div>
-      <div id="h1t-sin" class="tab-panel active">
-<pre>&lt;h1&gt;Título principal&lt;/h1&gt;
+      <div id="h1-sin" class="tab-panel active">
+<pre>&lt;h1&gt;Título principal (solo uno por página)&lt;/h1&gt;
 &lt;h2&gt;Subtítulo de sección&lt;/h2&gt;
 &lt;h3&gt;Apartado&lt;/h3&gt;
-&lt;h4&gt;Sub-apartado&lt;/h4&gt;</pre>
+&lt;h4&gt;Sub-apartado&lt;/h4&gt;
+&lt;h5&gt;Nivel 5&lt;/h5&gt;
+&lt;h6&gt;Nivel 6&lt;/h6&gt;</pre>
       </div>
-      <div id="h1t-dem" class="tab-panel">
+      <div id="h1-dem" class="tab-panel">
         <div class="Información">
-          <h1>H1 — Título Principal</h1>
-          <h2>H2 — Subtítulo</h2>
-          <h3>H3 — Apartado</h3>
-          <h4>H4 — Sub-apartado</h4>
+          <h1 style="font-size:1.5rem;margin:2px 0">H1 — Título principal</h1>
+          <h2 style="font-size:1.25rem;margin:2px 0">H2 — Subtítulo</h2>
+          <h3 style="font-size:1.1rem;margin:2px 0">H3 — Apartado</h3>
+          <h4 style="font-size:1rem;margin:2px 0">H4 — Sub-apartado</h4>
+          <h5 style="font-size:0.9rem;margin:2px 0">H5 — Nivel 5</h5>
+          <h6 style="font-size:0.82rem;color:#888;margin:2px 0">H6 — Nivel 6</h6>
+          <p style="margin-top:10px;font-size:0.85rem;color:#888">No saltes niveles (h1 → h3). El orden correcto importa para SEO y accesibilidad.</p>
         </div>
       </div>
     </div>
@@ -58,32 +60,73 @@
 
   <div class="tarjeta">
     <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;p&gt; &lt;strong&gt; &lt;em&gt; &lt;mark&gt; &lt;code&gt; &lt;a&gt; &lt;blockquote&gt;</span>
-      <h3>Párrafo, énfasis y citas</h3>
+      <span class="etiqueta-nombre">&lt;p&gt;</span>
+      <h3>Párrafo</h3>
     </div>
     <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Etiquetas de nivel de frase para añadir significado: importancia, énfasis, resaltado, código en línea, enlaces y citas.</p>
+      <p><strong>Definición:</strong> Define un bloque de texto como párrafo. El navegador agrega espacio automático arriba y abajo, separando visualmente el contenido.</p>
       <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'p1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'p1t','dem')">Información</button>
+        <button class="tab-btn active" onclick="tab(this,'p1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'p1','dem')">Información</button>
       </div>
-      <div id="p1t-sin" class="tab-panel active">
-<pre>&lt;p&gt;Aprende &lt;strong&gt;HTML5&lt;/strong&gt; con énfasis
-&lt;em&gt;semántico&lt;/em&gt;. Usa &lt;mark&gt;resaltado&lt;/mark&gt;.
-El atributo &lt;code&gt;href&lt;/code&gt; crea enlaces.&lt;/p&gt;
-
-&lt;a href="https://ejemplo.com" target="_blank"
-   rel="noopener noreferrer"&gt;Visitar sitio&lt;/a&gt;
-
-&lt;blockquote cite="https://fuente.com"&gt;
-  &lt;p&gt;"El conocimiento es poder."&lt;/p&gt;
-&lt;/blockquote&gt;</pre>
+      <div id="p1-sin" class="tab-panel active">
+<pre>&lt;p&gt;Este es el primer párrafo.&lt;/p&gt;
+&lt;p&gt;Este es el segundo párrafo, separado del primero.&lt;/p&gt;</pre>
       </div>
-      <div id="p1t-dem" class="tab-panel">
+      <div id="p1-dem" class="tab-panel">
         <div class="Información">
-          <p>Aprende <strong>HTML5</strong> con énfasis <em>semántico</em>. Usa <mark>resaltado</mark>. El atributo <code>href</code> crea enlaces.</p>
-          <p><a href="#">→ Visitar sitio externo</a></p>
-          <blockquote><p>"El conocimiento es poder." — Francis Bacon</p></blockquote>
+          <p>Este es el primer párrafo. Tiene texto que el navegador muestra en bloque con espacio arriba y abajo.</p>
+          <p>Este es el segundo párrafo, visualmente separado del anterior.</p>
+          <p style="font-size:0.85rem;color:#888">No uses <code>&lt;br&gt;</code> para simular párrafos. Usa siempre <code>&lt;p&gt;</code>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;strong&gt;</span>
+      <h3>Texto de importancia</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Indica que el texto tiene importancia semántica alta. Se muestra en negrita y los lectores de pantalla lo pronuncian con énfasis.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'strong1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'strong1','dem')">Información</button>
+      </div>
+      <div id="strong1-sin" class="tab-panel active">
+<pre>&lt;p&gt;&lt;strong&gt;Advertencia:&lt;/strong&gt; Guarda tu trabajo antes de cerrar.&lt;/p&gt;</pre>
+      </div>
+      <div id="strong1-dem" class="tab-panel">
+        <div class="Información">
+          <p><strong>Advertencia:</strong> Guarda tu trabajo antes de cerrar.</p>
+          <p>El campo de <strong>correo electrónico</strong> es obligatorio.</p>
+          <p style="margin-top:8px;font-size:0.85rem;color:#888">Usa <code>&lt;b&gt;</code> solo para negrita visual sin significado semántico.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;em&gt;</span>
+      <h3>Énfasis</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Marca texto con énfasis estresado, cambiando el significado de la frase. Visualmente aparece en cursiva y los lectores de pantalla le dan entonación especial.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'em1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'em1','dem')">Información</button>
+      </div>
+      <div id="em1-sin" class="tab-panel active">
+<pre>&lt;p&gt;Debes &lt;em&gt;siempre&lt;/em&gt; guardar tu trabajo.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Yo&lt;/em&gt; lo hice, no él.&lt;/p&gt;</pre>
+      </div>
+      <div id="em1-dem" class="tab-panel">
+        <div class="Información">
+          <p>Debes <em>siempre</em> guardar tu trabajo.</p>
+          <p><em>Yo</em> lo hice, no él.</p>
+          <p style="margin-top:8px;font-size:0.85rem;color:#888">Usa <code>&lt;i&gt;</code> solo para cursiva decorativa. <code>&lt;em&gt;</code> es para énfasis real.</p>
         </div>
       </div>
     </div>
@@ -93,15 +136,10 @@ El atributo &lt;code&gt;href&lt;/code&gt; crea enlaces.&lt;/p&gt;
     <a href="estructura.html">← Anterior: Estructura</a>
     <a href="listas.html">Siguiente: Listas →</a>
   </div>
-
 </section>
 </main>
-
-<footer>
-  <p>Etiquetas HTML explicadas por categorías</p>
-</footer>
-
-
-<script src="script.js"></script>
+<footer><p>Etiquetas HTML explicadas por categorías</p></footer>
+<button id="btnTop" onclick="irArriba()" title="Volver arriba">⬆</button>
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Listas — Etiquetas HTML</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Etiquetas HTML</title>
+  <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
-
 <header>
   <h1>Etiquetas HTML</h1>
   <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
 </header>
-
 <nav>
   <a href="index.html">Inicio</a>
-  <a href="estructura.html">Estructurales</a>
+  <a href="estructura.html">Estructura</a>
   <a href="texto.html">Texto</a>
   <a href="listas.html" class="active">Listas</a>
   <a href="formularios.html">Formularios</a>
@@ -23,46 +21,64 @@
   <a href="multimedia.html">Multimedia</a>
   <a href="practica.html">Práctica</a>
 </nav>
-
 <main>
 <section class="categoria">
   <h2 class="categoria-titulo">Etiquetas de Listas</h2>
 
   <div class="tarjeta">
     <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;ul&gt; &lt;ol&gt; &lt;li&gt;</span>
-      <h3>Listas ordenadas y desordenadas</h3>
+      <span class="etiqueta-nombre">&lt;ul&gt;</span>
+      <h3>Lista desordenada</h3>
     </div>
     <div class="tarjeta-body">
-      <p><strong color="red">Definición:</strong> &lt;ul&gt; crea listas con viñetas; &lt;ol&gt; listas numeradas; &lt;li&gt; define cada ítem.</p>
+      <p><strong>Definición:</strong> Crea una lista de ítems sin orden específico. Cada ítem se muestra con una viñeta (•) por defecto. Úsala cuando el orden no importa.</p>
       <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'ul1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'ul1t','dem')">Información</button>
+        <button class="tab-btn active" onclick="tab(this,'ul1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'ul1','dem')">Información</button>
       </div>
-      <div id="ul1t-sin" class="tab-panel active">
-<pre>&lt;!-- Desordenada --&gt;
-&lt;ul&gt;
+      <div id="ul1-sin" class="tab-panel active">
+<pre>&lt;ul&gt;
   &lt;li&gt;HTML&lt;/li&gt;
   &lt;li&gt;CSS&lt;/li&gt;
   &lt;li&gt;JavaScript&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;</pre>
+      </div>
+      <div id="ul1-dem" class="tab-panel">
+        <div class="Información">
+          <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          <p style="margin-top:10px;font-size:0.85rem;color:#888">💡 Ideal para: ingredientes, características, opciones, menús de navegación.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-&lt;!-- Ordenada --&gt;
-&lt;ol&gt;
-  &lt;li&gt;Instalar editor&lt;/li&gt;
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;ol&gt;</span>
+      <h3>Lista ordenada</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Crea una lista numerada donde el orden importa. Puede personalizar el número inicial con <code>start</code> y el tipo de numeración con <code>type</code>.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'ol1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'ol1','dem')">Información</button>
+      </div>
+      <div id="ol1-sin" class="tab-panel active">
+<pre>&lt;ol&gt;
+  &lt;li&gt;Instalar el editor&lt;/li&gt;
   &lt;li&gt;Crear index.html&lt;/li&gt;
   &lt;li&gt;Abrir en el navegador&lt;/li&gt;
 &lt;/ol&gt;</pre>
       </div>
-      <div id="ul1t-dem" class="tab-panel">
+      <div id="ol1-dem" class="tab-panel">
         <div class="Información" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
           <div>
-            <p><strong>Desordenada:</strong></p>
-            <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <p style="font-size:0.85rem;font-weight:bold;margin-bottom:6px">Pasos:</p>
+            <ol><li>Instalar el editor</li><li>Crear index.html</li><li>Abrir en el navegador</li></ol>
           </div>
           <div>
-            <p><strong>Ordenada:</strong></p>
-            <ol><li>Instalar editor</li><li>Crear archivo</li><li>Ver en navegador</li></ol>
+            <p style="font-size:0.85rem;font-weight:bold;margin-bottom:6px">Con letras:</p>
+            <ol type="A" start="3"><li>Opción C</li><li>Opción D</li></ol>
           </div>
         </div>
       </div>
@@ -71,31 +87,34 @@
 
   <div class="tarjeta">
     <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</span>
-      <h3>Lista de definición</h3>
+      <span class="etiqueta-nombre">&lt;li&gt;</span>
+      <h3>Ítem de lista</h3>
     </div>
     <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Agrupa pares término–descripción. Ideal para glosarios y especificaciones técnicas.</p>
+      <p><strong>Definición:</strong> Define cada elemento dentro de una lista <code>&lt;ul&gt;</code> u <code>&lt;ol&gt;</code>. Puede contener texto, imágenes, enlaces u otras listas anidadas.</p>
       <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'dl1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'dl1t','dem')">Información</button>
+        <button class="tab-btn active" onclick="tab(this,'li1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'li1','dem')">Información</button>
       </div>
-      <div id="dl1t-sin" class="tab-panel active">
-<pre>&lt;dl&gt;
-  &lt;dt&gt;HTML&lt;/dt&gt;
-  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
-
-  &lt;dt&gt;CSS&lt;/dt&gt;
-  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
-&lt;/dl&gt;</pre>
+      <div id="li1-sin" class="tab-panel active">
+<pre>&lt;ul&gt;
+  &lt;li&gt;Elemento simple&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Elemento con enlace&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Con lista anidada
+    &lt;ul&gt;
+      &lt;li&gt;Sub-elemento 1&lt;/li&gt;
+      &lt;li&gt;Sub-elemento 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</pre>
       </div>
-      <div id="dl1t-dem" class="tab-panel">
+      <div id="li1-dem" class="tab-panel">
         <div class="Información">
-          <dl>
-            <dt>HTML</dt><dd>HyperText Markup Language</dd>
-            <dt>CSS</dt><dd>Cascading Style Sheets</dd>
-            <dt>JS</dt><dd>JavaScript</dd>
-          </dl>
+          <ul>
+            <li>Elemento simple</li>
+            <li><a href="#">Elemento con enlace</a></li>
+            <li>Elemento con lista anidada<ul><li>Sub-elemento 1</li><li>Sub-elemento 2</li></ul></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -105,15 +124,10 @@
     <a href="texto.html">← Anterior: Texto</a>
     <a href="formularios.html">Siguiente: Formularios →</a>
   </div>
-
 </section>
 </main>
-
-<footer>
-  <p>Etiquetas HTML explicadas por categorías</p>
-</footer>
-
-
-<script src="script.js"></script>
+<footer><p>Etiquetas HTML explicadas por categorías</p></footer>
+<button id="btnTop" onclick="irArriba()" title="Volver arriba">⬆</button>
+<script src="js/script.js"></script>
 </body>
 </html>

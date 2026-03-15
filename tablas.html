@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tablas — Etiquetas HTML</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Etiquetas HTML</title>
+  <link rel="stylesheet" href="css/Style.css">
 </head>
 <body>
-
 <header>
   <h1>Etiquetas HTML</h1>
   <p>Aprende las etiquetas HTML organizadas por categorías, con ejemplos prácticos.</p>
 </header>
-
 <nav>
   <a href="index.html">Inicio</a>
-  <a href="estructura.html">Estructurales</a>
+  <a href="estructura.html">Estructura</a>
   <a href="texto.html">Texto</a>
   <a href="listas.html">Listas</a>
   <a href="formularios.html">Formularios</a>
@@ -23,30 +21,28 @@
   <a href="multimedia.html">Multimedia</a>
   <a href="practica.html">Práctica</a>
 </nav>
-
 <main>
 <section class="categoria">
   <h2 class="categoria-titulo">Etiquetas de Tablas</h2>
 
   <div class="tarjeta">
     <div class="tarjeta-header">
-      <span class="etiqueta-nombre">&lt;table&gt; &lt;thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;th&gt; &lt;td&gt; &lt;caption&gt;</span>
-      <h3>Tabla de datos completa</h3>
+      <span class="etiqueta-nombre">&lt;table&gt;</span>
+      <h3>Tabla de datos</h3>
     </div>
     <div class="tarjeta-body">
-      <p><strong>Definición:</strong> Estructuran datos tabulares. &lt;thead&gt; para encabezados, &lt;tbody&gt; para datos, &lt;th&gt; para celdas de cabecera y &lt;td&gt; para datos.</p>
+      <p><strong>Definición:</strong> Contenedor principal que define una tabla de datos. Dentro van <code>&lt;thead&gt;</code> para los encabezados y <code>&lt;tbody&gt;</code> para los datos. Solo debe usarse para información tabular, nunca para maquetar páginas.</p>
       <div class="tabs">
-        <button class="tab-btn active" onclick="tab(this,'tbl1t','sin')">Sintaxis</button>
-        <button class="tab-btn" onclick="tab(this,'tbl1t','dem')">Información</button>
+        <button class="tab-btn active" onclick="tab(this,'table1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'table1','dem')">Información</button>
       </div>
-      <div id="tbl1t-sin" class="tab-panel active">
+      <div id="table1-sin" class="tab-panel active">
 <pre>&lt;table&gt;
-  &lt;caption&gt;Tecnologías Web&lt;/caption&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th scope="col"&gt;Lenguaje&lt;/th&gt;
-      &lt;th scope="col"&gt;Tipo&lt;/th&gt;
-      &lt;th scope="col"&gt;Año&lt;/th&gt;
+      &lt;th&gt;Nombre&lt;/th&gt;
+      &lt;th&gt;Tipo&lt;/th&gt;
+      &lt;th&gt;Año&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
@@ -58,19 +54,52 @@
   &lt;/tbody&gt;
 &lt;/table&gt;</pre>
       </div>
-      <div id="tbl1t-dem" class="tab-panel">
+      <div id="table1-dem" class="tab-panel">
         <div class="Información">
           <table>
-            <caption style="text-align:left;font-size:0.85rem;color:#666;margin-bottom:6px">Tecnologías Web Frontend</caption>
-            <thead>
-              <tr><th>Lenguaje</th><th>Tipo</th><th>Año</th></tr>
-            </thead>
+            <thead><tr><th>Lenguaje</th><th>Tipo</th><th>Año</th></tr></thead>
             <tbody>
               <tr><td>HTML5</td><td>Marcado</td><td>2014</td></tr>
-              <tr><td>CSS3</td><td>Estilo</td><td>2011</td></tr>
+              <tr><td>CSS3</td><td>Estilos</td><td>2011</td></tr>
               <tr><td>JavaScript</td><td>Programación</td><td>1995</td></tr>
             </tbody>
           </table>
+          <p style="margin-top:10px;font-size:0.85rem;color:#888">Nunca uses <code>&lt;table&gt;</code> para diseñar columnas o layouts. Para eso usa CSS Grid o Flexbox.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <div class="tarjeta-header">
+      <span class="etiqueta-nombre">&lt;tr&gt;</span>
+      <h3>Fila de tabla</h3>
+    </div>
+    <div class="tarjeta-body">
+      <p><strong>Definición:</strong> Define una fila horizontal dentro de la tabla. Contiene celdas de encabezado <code>&lt;th&gt;</code> o celdas de datos <code>&lt;td&gt;</code>. Las celdas pueden fusionarse con <code>colspan</code> y <code>rowspan</code>.</p>
+      <div class="tabs">
+        <button class="tab-btn active" onclick="tab(this,'tr1','sin')">Sintaxis</button>
+        <button class="tab-btn" onclick="tab(this,'tr1','dem')">Información</button>
+      </div>
+      <div id="tr1-sin" class="tab-panel active">
+<pre>&lt;tr&gt;
+  &lt;th scope="col"&gt;Producto&lt;/th&gt;
+  &lt;th scope="col"&gt;Precio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td colspan="2"&gt;Agotado temporalmente&lt;/td&gt;
+&lt;/tr&gt;</pre>
+      </div>
+      <div id="tr1-dem" class="tab-panel">
+        <div class="Información">
+          <table>
+            <thead><tr><th scope="col">Producto</th><th scope="col">Q1</th><th scope="col">Q2</th></tr></thead>
+            <tbody>
+              <tr><td>Teclado</td><td colspan="2" style="text-align:center;background:#fef9e7">Agotado (colspan=2)</td></tr>
+              <tr><td>Mouse</td><td>$35.000</td><td>$30.000</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:10px;font-size:0.85rem;color:#888">Usa <code>scope="col"</code> en <code>&lt;th&gt;</code> para indicar que el encabezado corresponde a esa columna.</p>
         </div>
       </div>
     </div>
@@ -80,15 +109,10 @@
     <a href="formularios.html">← Anterior: Formularios</a>
     <a href="multimedia.html">Siguiente: Multimedia →</a>
   </div>
-
 </section>
 </main>
-
-<footer>
-  <p>Etiquetas HTML explicadas por categorías</p>
-</footer>
-
-
-<script src="script.js"></script>
+<footer><p>Etiquetas HTML explicadas por categorías</p></footer>
+<button id="btnTop" onclick="irArriba()" title="Volver arriba">⬆</button>
+<script src="js/script.js"></script>
 </body>
 </html>
